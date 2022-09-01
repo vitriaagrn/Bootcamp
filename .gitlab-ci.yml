@@ -16,11 +16,11 @@ build:docker:
       command: ["--insecure-registry=10.42.29.110:5000"]
       alias: dockerd
   variables:
-      DOCKER_HOST: tcp://dockerd:2375
-      DOCKER_DRIVER: overlay2
-      DOCKER_TLS_CERTDIR: ""
+    DOCKER_HOST: tcp://dockerd:2375
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: ""
   before_script:
     - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_DEPENDENCY_PROXY_SERVER
   script:
     - docker build -f Dockerfile -t $CI_DEPENDENCY_PROXY_SERVER/vitriagrn/bootcamp-nginx:latest .
-    - docker push $CI_DEPENDENCY_PROXY_SERVER/vitriagrn/bootcamp-nginx:latest 
+    - docker push $CI_DEPENDENCY_PROXY_SERVER/vitriagrn/bootcamp-nginx:latest
