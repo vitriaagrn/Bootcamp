@@ -7,7 +7,7 @@ variables:
   CI_REGISTRY_PASSWORD: "nutanix/4u"
   CI_DEPENDENCY_PROXY_SERVER: "10.42.29.110:5000"
 
-  build docker:
+  build:docker:
     stage: build
     image: docker:stable
     service:
