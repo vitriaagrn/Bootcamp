@@ -10,7 +10,7 @@ variables:
 build:docker:
   stage: build
   image: docker:stable
-  service:
+  services:
     - name: docker:18.09-dind
       entrypoint: ["dockerd-entrypoint.sh"]
       command: ["--insecure-registry=10.42.29.110:5000"]
