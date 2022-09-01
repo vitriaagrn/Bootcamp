@@ -1,0 +1,3 @@
+print:
+  image: ubuntu
+  script: echo "saya sedang belajar github-ci"
