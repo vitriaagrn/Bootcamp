@@ -3,7 +3,6 @@ stages:
   - build
   - deploy
 print:
-  stage: print
   image: ubuntu
   script: echo "saya sedang belajar github-ci"
 
